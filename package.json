@@ -1,0 +1,20 @@
+{
+  "name": "t2ma",
+  "version": "0.0.1",
+  "description": "",
+  "license": "UNLICENSED",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx t2tc src/main.t2 --outDir tmp/ && npx tsc --ignoreConfig tmp/main.ts --outDir dist/ --skipLibCheck",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "phaser": "^4.0.0"
+  },
+  "devDependencies": {
+    "t2lang": "file:../t2lang",
+    "typescript": "^6.0.3"
+  }
+}

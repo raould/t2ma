@@ -1,0 +1,3 @@
+(program
+    (import * as Phaser "phaser")
+)
