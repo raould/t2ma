@@ -16,6 +16,11 @@
             width: 480,
             height: 640,
             scene: (new Scene1),
+            scale: {
+                model: Phaser.Scale.FIT,
+                autoCenter: Phaser.Scale.CENTER_BOTH,
+                min: { width: 480, height: 640 },
+            }
         })
         (game (new Phaser.Game config))
     ))
