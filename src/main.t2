@@ -5,7 +5,7 @@
             (constructor () (super "Scene1"))
             (method preload ()
                 (console.log "preload")
-                (this.load.image "gem" "resoures/assets/gem6.png")
+                (this.load.image "gem" "images/gem.png")
             )
             (method create () (console.log "create")
         )
@@ -13,8 +13,8 @@
     (const* (
         (config {
             type: Phaser.AUTO,
-            width: 640,
-            height: 480,
+            width: 480,
+            height: 640,
             scene: (new Scene1),
         })
         (game (new Phaser.Game config))

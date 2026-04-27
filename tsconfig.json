@@ -30,7 +30,7 @@
     "noUnusedParameters": true // Report errors on unused parameters in functions
   },
   "include": [
-    "./src/*.ts"
+    "./tmp/*.ts"
   ],
   "exclude": [
     "node_modules/**/*"
