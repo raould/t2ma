@@ -5,9 +5,11 @@
   "license": "UNLICENSED",
   "author": "",
   "type": "module",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
-    "build": "npx t2tc src/main.t2 --outDir tmp/ && npx tsc --ignoreConfig tmp/main.ts --outDir dist/ --skipLibCheck",
+    "start-dev": "vite",
+    "build-dev": "npx t2tc src/main.t2 --outDir tmp/",
+    "build-dist": "npx t2tc src/main.t2 --outDir tmp/ && vite build && sed -i 's/ type=\"module\"//g; s/ crossorigin//g' dist/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -15,6 +17,7 @@
   },
   "devDependencies": {
     "t2lang": "file:../t2lang",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "vite": "^8.0.10"
   }
 }

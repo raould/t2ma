@@ -1,18 +1,21 @@
 (program
     (import * as Phaser "phaser")
-    (const* (
-        (scene1 (new Phaser.Class (extends Phaser.Scene)
-            (class-body
-                (constructor (super "Scene1"))
-                (method override preload () (console.log "preload"))
-                (method override create () (console.log "create")
+    (class Scene1 (extends Phaser.Scene)
+        (class-body
+            (constructor () (super "Scene1"))
+            (method preload ()
+                (console.log "preload")
+                (this.load.image "gem" "resoures/assets/gem6.png")
             )
-        ))
+            (method create () (console.log "create")
+        )
+    ))
+    (const* (
         (config {
             type: Phaser.AUTO,
             width: 640,
             height: 480,
-            scene: scene1,
+            scene: (new Scene1),
         })
         (game (new Phaser.Game config))
     ))
