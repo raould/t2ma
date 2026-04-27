@@ -1,18 +1,19 @@
 (program
     (import * as Phaser "phaser")
     (const* (
-        (preload (fn () (console.log "preload")))
-        (create (fn () (console.log "create")))
+        (scene1 (new Phaser.Class (extends Phaser.Scene)
+            (class-body
+                (constructor (super "Scene1"))
+                (method override preload () (console.log "preload"))
+                (method override create () (console.log "create")
+            )
+        ))
         (config {
-            "type": Phaser.AUTO,
-            "width": 640,
-            "height": 480,
-            "scene": {
-                "preload": preload,
-                "create": create
-            }
+            type: Phaser.AUTO,
+            width: 640,
+            height: 480,
+            scene: scene1,
         })
-        (PhaserGame (. Phaser Game))
-        (game (new PhaserGame config))
+        (game (new Phaser.Game config))
     ))
 )
