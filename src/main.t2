@@ -1,3 +1,18 @@
 (program
     (import * as Phaser "phaser")
+    (const* (
+        (preload (fn () (console.log "preload")))
+        (create (fn () (console.log "create")))
+        (config {
+            "type": Phaser.AUTO,
+            "width": 640,
+            "height": 480,
+            "scene": {
+                "preload": preload,
+                "create": create
+            }
+        })
+        (PhaserGame (. Phaser Game))
+        (game (new PhaserGame config))
+    ))
 )
