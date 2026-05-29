@@ -19,7 +19,7 @@
     )
     (class Scene1 (extends Phaser.Scene)
         (class-body
-            (field private (gem: Phaser.GameObjects.Sprite))
+            (field private (gem: any))
             (constructor () (super "Scene1"))
             (method preload ()
                 (console.log "preload")
