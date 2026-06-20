@@ -6,6 +6,7 @@
   "author": "",
   "type": "module",
   "main": "index.html",
+  "packageManager": "pnpm@11.8.0",
   "scripts": {
     "clean": "rm -f tmp/* && rm -f dist/*",
     "start-dev": "vite",
@@ -22,5 +23,9 @@
     "t2lang": "^0.0.3",
     "typescript": "^6.0.3",
     "vite": "^8.0.10"
-  }
+  },
+    "engines": {
+	"npm": "0.0.0",
+	"pnpm": ">=0"
+    }
 }
