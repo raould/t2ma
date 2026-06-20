@@ -9,17 +9,17 @@
   "scripts": {
     "clean": "rm -f tmp/* && rm -f dist/*",
     "start-dev": "vite",
-    "build-dev-ts": "npm exec -- t2tc src/main.t2 --outDir tmp/",
+    "build-dev-ts": "pnpm exec -- t2tc src/main.t2 --outDir tmp/",
     "build-dev-js": "tsc",
-    "build-dev": "npm run build-dev-ts && npm run build-dev-js",
-    "build-dist": "npm exec -- t2tc src/main.t2 --outDir tmp/ && vite build && sed -i 's/ type=\"module\"//g; s/ crossorigin//g' dist/index.html",
+    "build-dev": "pnpm run build-dev-ts && pnpm run build-dev-js",
+    "build-dist": "pnpm exec -- t2tc src/main.t2 --outDir tmp/ && vite build && sed -i 's/ type=\"module\"//g; s/ crossorigin//g' dist/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "phaser": "^4.0.0"
   },
   "devDependencies": {
-    "t2lang": "file:../t2lang",
+    "t2lang": "^0.0.3",
     "typescript": "^6.0.3",
     "vite": "^8.0.10"
   }
