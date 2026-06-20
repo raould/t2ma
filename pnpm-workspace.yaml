@@ -1,5 +1,4 @@
 allowBuilds:
   esbuild: false
 minimumReleaseAgeExclude:
-  - t2lang@0.0.1
-  - t2lang@0.0.3
+  - t2lang
